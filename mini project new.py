@@ -22,4 +22,15 @@ def buy_item():
             print("Item purchased successfully")
         else:
             print("we don't have enough stock")
-   
+
+def change_price():
+     name=input("Enter the name of the item:")
+     price=int(input("Enter the new price of the item:"))
+     for key , values in inventory.items():
+          if key==name:
+               inventory[key]["price"]=price
+               print("Price updated successfully")
+               break
+          else:
+               print("Item not available")
+               exit()
